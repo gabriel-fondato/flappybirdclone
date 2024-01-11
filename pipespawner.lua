@@ -2,7 +2,9 @@ pipespawner = {gapSizeIncreser = 75}
 Pipe1 = require("pipe1")
 Pipe1x = 0
 function pipespawner:load()
-    Pipe1:setPos(love.math.random(love.graphics.getHeight()),75)
+    Pipe1:setPos(love.math.random(85,love.graphics.getHeight()-85),75)
+    self.gapSizeIncreser = 75
+
 end
 
 function pipespawner:update()
@@ -13,7 +15,7 @@ function pipespawner:update()
     if(Pipe1x<-50) then
         self.gapSizeIncreser = self.gapSizeIncreser + 0.01
         Pipe1:setX(love.graphics.getWidth())
-        Pipe1:setPos(love.math.random(love.graphics.getHeight()-85),self.gapSizeIncreser)
+        Pipe1:setPos(love.math.random(85,love.graphics.getHeight()-85),self.gapSizeIncreser)
         print(self.gapSizeIncreser)
     end
 

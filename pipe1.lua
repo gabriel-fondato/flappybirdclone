@@ -25,7 +25,7 @@ function Pipe1:setX(X)
 end
 
 function Pipe1:load()
-
+    speed = 4
 end
 
 function Pipe1:update(dt)

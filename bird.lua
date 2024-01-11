@@ -6,6 +6,8 @@ function bird:load()
     self.Yvel = 0
     self.rotation = 0
     self.gravity = 0.4
+    collided = false
+    self.AditionalYvel = 0
 end
 
 function bird:update(dt)
